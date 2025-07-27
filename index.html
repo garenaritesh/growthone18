@@ -1,0 +1,77 @@
+<!-- PHP SCRIPT -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> OneFit </title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Body Content Here -->
+
+    <!-- Header -->
+    <!-- <nav>
+        <div class="logo">
+            <h1>one<span>18</span>Fit</h1>
+        </div>
+    </nav> -->
+
+
+
+    <!-- Main Container Here -->
+
+    <div class="container">
+        <div class="header_img">
+            <img src="assets/header_img.png" alt="">
+        </div>
+        <div class="header_intro">
+            <h1 id="dayWorkout">Welcome to onefit</h1>
+            <p>Let's start with exercise like build not body , it's like build Aura !</p>
+            <button><a href="pages/phase1.html">Phase 1</a></button>
+            <button><a href="pages/haircare.html">Hair Care</a></button>
+            <button><a href="pages/skincare.html">Skin Care</a></button>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p>owned by <span>@one18</span> community | all right reserved 2025</p>
+    </footer>
+
+
+    <script>
+        const workoutPlan = {
+            Sunday: "Rest Day 😌",
+            Monday: "Chest + Triceps 💪",
+            Tuesday: "Back + Biceps 🦵",
+            Wednesday: "Leg + Glutes 💥",
+            Thursday: "Shoulders + Abs 🧍",
+            Friday: "Full Body + HIIT 🏃‍♂️",
+            Saturday: "Skretching + Cardio 👐"
+        };
+
+        const today = new Date();
+        const dayName = today.toLocaleDateString('en-US', { weekday: 'long' });
+        const workoutText = `${workoutPlan[dayName]}`;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("dayWorkout").innerText = workoutText;
+        });
+    </script>
+
+
+</body>
+
+</html>
